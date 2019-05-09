@@ -25,8 +25,10 @@ public class InputOut {
                     }
                 }
             }}
-        catch(Exception e) {
-            System.out.println(e);
+        catch(FileNotFoundException e) {
+            System.out.println("Unable to access the file");
         }
     }
 }
+
+
