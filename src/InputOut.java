@@ -8,14 +8,14 @@ import java.util.Objects;
 
 public class InputOut {
     public static void main(String[] args) throws IOException {
-        try{
-            BufferedReader in = new BufferedReader(new FileReader(System.getProperty("user.home")+"/Desktop/" + "InputFile1.txt"));
+        try(BufferedReader in = new BufferedReader(new FileReader(System.getProperty("user.home")+"/Desktop/" + "InputFile1.txt")))
+        {
             String str;
             List<String> list = new ArrayList<String>();
             while((str = in.readLine()) != null){
                 list.add(str);
             }
-            in.close();
+            //in.close();
 
             for(int i=0;i<list.size();i++){
                 //System.out.println(list.get(i)+"a");
