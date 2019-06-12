@@ -2,39 +2,39 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Operation {
+public class Operation implements OperateInterface{
 
-    static void operate(List<Integer> list){
+    public void operate1(List<Integer> list){
 
         // TODO : Use interface type
-        HashMap<Integer, Integer> hmap =   new HashMap<Integer, Integer>();
-
+        Map<Integer, Integer> hmap =   new HashMap<Integer, Integer>();
 
         // Traverse through the given list
-        for (int i = 0; i < list.size(); i++)
+        for (Integer element : list)
         {
-
-            // TODO : Use a list iterator
-            // TODO : or use foreach
-            Integer c = hmap.get(list.get(i));
+            Integer c = hmap.get(element);
 
             // If this is first occurrence of element
             // TODO Don't use null. Try 'contains'
-            if (hmap.get(list.get(i)) == null)
-                hmap.put(list.get(i), 1);
+            if (!hmap.containsKey(element))
+                hmap.put(element, 1);
 
                 // If elements already exists in hash map
             else
-                hmap.put(list.get(i), ++c);
+                hmap.put(element, ++c);
         }
 
         // TODO Return the the dup map
         // Print result
-        for (Map.Entry m:hmap.entrySet()) {
-            int x= (int) m.getValue();
-            System.out.println("Number " + m.getKey() +
-                    " is matching totally " + m.getValue() + " times");
-        }
+//        Map<Integer, Integer> ReturnHmap =   new HashMap<Integer, Integer>();
+//        for (Map.Entry m:hmap.entrySet()) {
+//            int x= (int) m.getValue();
+//            System.out.println("Number " + m.getKey() +
+//                    " is matching totally " + m.getValue() + " times");
+//            ReturnHmap.put(m.getKey(),m.getValue());
+
+   //     }
+    return hmap;
 
     }
 }

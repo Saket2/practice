@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class InputOutBulk extends Operation {
+public class InputOutBulk {
 
     public static void main(String[] args) {
         //Provide an input for number of integers to be generated
@@ -22,15 +22,17 @@ public class InputOutBulk extends Operation {
         list.add(rand_int1);
     }
         System.out.println(list);//to check the list generated
-        operate(list);
+
+        OperateInterface operation = new Operation();
+
+
+
+        operation.operate1(list);
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
         System.out.println("Time taken in nano seconds : "+totalTime);
 
     }
-
-    // TODO : Write this in a seperate class file
-
 }
 
 
