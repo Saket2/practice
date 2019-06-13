@@ -2,14 +2,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Operation {
+public class FindingDuplicate<T> {
 
-    public Map<Integer, Integer> operate1(List<Integer> list){
+    public Map<T, Integer> FindRepititions(List<T> list){
 
-        Map<Integer, Integer> hmap =   new HashMap<Integer, Integer>();
+        Map<T, Integer> hmap =   new HashMap<T, Integer>();
 
         // Traverse through the given list
-        for (Integer element : list)
+        for (T element : list)
         {
             Integer c = hmap.get(element);
 
@@ -21,11 +21,11 @@ public class Operation {
             else
                 hmap.put(element, ++c);
         }
-        
+
         // Print result
-        Map<Integer, Integer> ReturnHmap =   new HashMap<Integer, Integer>();
+        Map<T, Integer> ReturnHmap =   new HashMap<T, Integer>();
         for (Map.Entry m:hmap.entrySet()) {
-            int x= (int) m.getValue();
+            int x = (int) m.getValue();
             System.out.println("Number " + m.getKey() +
                     " is matching totally " + m.getValue() + " times");
 

@@ -3,7 +3,6 @@ import java.util.*;
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class InputOutBulk {
 
     public static void main(String[] args) {
@@ -16,18 +15,15 @@ public class InputOutBulk {
 
         //Random number generator
         Random rand = new Random();
-        List<Integer> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for(int i=0;i<a;i++){
-        int rand_int1 = rand.nextInt(10);
+        String rand_int1 = String.valueOf(rand.nextInt(10));
         list.add(rand_int1);
     }
         System.out.println(list);//to check the list generated
 
-        Operation operation = new Operation();
-
-
-
-        operation.operate1(list);
+        FindingDuplicate operation = new FindingDuplicate();
+        operation.FindRepititions(list);
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
         System.out.println("Time taken in nano seconds : "+totalTime);
