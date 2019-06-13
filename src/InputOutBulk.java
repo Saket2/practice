@@ -23,7 +23,7 @@ public class InputOutBulk {
     }
         System.out.println(list);//to check the list generated
 
-        OperateInterface operation = new Operation();
+        Operation operation = new Operation();
 
 
 

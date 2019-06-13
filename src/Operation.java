@@ -2,11 +2,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Operation implements OperateInterface{
+public class Operation {
 
-    public void operate1(List<Integer> list){
+    public Map<Integer, Integer> operate1(List<Integer> list){
 
-        // TODO : Use interface type
         Map<Integer, Integer> hmap =   new HashMap<Integer, Integer>();
 
         // Traverse through the given list
@@ -15,7 +14,6 @@ public class Operation implements OperateInterface{
             Integer c = hmap.get(element);
 
             // If this is first occurrence of element
-            // TODO Don't use null. Try 'contains'
             if (!hmap.containsKey(element))
                 hmap.put(element, 1);
 
@@ -23,17 +21,15 @@ public class Operation implements OperateInterface{
             else
                 hmap.put(element, ++c);
         }
-
-        // TODO Return the the dup map
+        
         // Print result
-//        Map<Integer, Integer> ReturnHmap =   new HashMap<Integer, Integer>();
-//        for (Map.Entry m:hmap.entrySet()) {
-//            int x= (int) m.getValue();
-//            System.out.println("Number " + m.getKey() +
-//                    " is matching totally " + m.getValue() + " times");
-//            ReturnHmap.put(m.getKey(),m.getValue());
+        Map<Integer, Integer> ReturnHmap =   new HashMap<Integer, Integer>();
+        for (Map.Entry m:hmap.entrySet()) {
+            int x= (int) m.getValue();
+            System.out.println("Number " + m.getKey() +
+                    " is matching totally " + m.getValue() + " times");
 
-   //     }
+        }
     return hmap;
 
     }
