@@ -10,15 +10,7 @@ public class CheckEmptyString {
         Scanner sc = new Scanner(System.in);
         S = sc.nextLine();
         boolean status=StringUtils.isEmpty(S);
-//        CheckEmptyString Saket = new CheckEmptyString();
-//        boolean status1=Saket.StringChecker(S);
         System.out.println(status);
     }
-
-//    public boolean StringChecker(String Str){
-//        boolean status = Str.isEmpty();
-//        System.out.println(status);
-//        return status;
-//    }
 }
 
